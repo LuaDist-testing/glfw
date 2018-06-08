@@ -1,16 +1,17 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "glfw"
-version = "0.1.1-1"
+version = "0.1.2-0"
 -- LuaDist source
 source = {
-  tag = "0.1.1-1",
+  tag = "0.1.2-0",
   url = "git://github.com/LuaDist-testing/glfw.git"
 }
 -- Original source
 -- source = {
---    url = "https://github.com/starwing/lua-nanovg/archive/0.1.1.zip",
---    dir = "lua-nanovg-0.1.1"
+--    url = "https://github.com/starwing/lua-nanovg/archive/0.1.2.zip",
+--    tag = "0.1.2-0",
+--    dir = "lua-nanovg-0.1.2"
 -- }
 description = {
    summary = "Lua binding for GLFW",
@@ -30,13 +31,14 @@ build = {
                   "_GLFW_WIN32",
                   "_GLFW_USE_OPENGL",
                   "_GLFW_WGL",
-                  "_GLFW_BUILD_DLL",
+                  "_GLFW_BUILD_DLL"
                },
                incdirs = {
-                  "glfw/include",
+                  "glfw/include"
                },
                libraries = {
-                  "gdi32", "opengl32"
+                  "gdi32",
+                  "opengl32"
                },
                sources = {
                   "lua-glfw.c",
@@ -46,7 +48,6 @@ build = {
                   "glfw/src/monitor.c",
                   "glfw/src/vulkan.c",
                   "glfw/src/window.c",
-
                   "glfw/src/wgl_context.c",
                   "glfw/src/egl_context.c",
                   "glfw/src/win32_init.c",
@@ -54,7 +55,7 @@ build = {
                   "glfw/src/win32_monitor.c",
                   "glfw/src/win32_time.c",
                   "glfw/src/win32_tls.c",
-                  "glfw/src/win32_window.c",
+                  "glfw/src/win32_window.c"
                }
             }
          }
