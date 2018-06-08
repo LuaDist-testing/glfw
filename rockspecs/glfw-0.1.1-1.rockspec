@@ -1,17 +1,9 @@
--- This file was automatically generated for the LuaDist project.
-
 package = "glfw"
-version = "0.1.0-1"
--- LuaDist source
+version = "0.1.1-1"
 source = {
-  tag = "0.1.0-1",
-  url = "git://github.com/LuaDist-testing/glfw.git"
+   url = "https://github.com/starwing/lua-nanovg/archive/0.1.1.zip",
+   dir = "lua-nanovg-0.1.1"
 }
--- Original source
--- source = {
---    url = "https://github.com/starwing/lua-nanovg/archive/0.1.0.zip",
---    dir = "lua-nanovg-0.1.0"
--- }
 description = {
    summary = "Lua binding for GLFW",
    homepage = "https://github.com/starwing/lua-nanovg",
@@ -36,7 +28,7 @@ build = {
                   "glfw/include",
                },
                libraries = {
-                  "gdi32", "winmm", "opengl32"
+                  "gdi32", "opengl32"
                },
                sources = {
                   "lua-glfw.c",
@@ -44,15 +36,17 @@ build = {
                   "glfw/src/init.c",
                   "glfw/src/input.c",
                   "glfw/src/monitor.c",
+                  "glfw/src/vulkan.c",
                   "glfw/src/window.c",
 
                   "glfw/src/wgl_context.c",
+                  "glfw/src/egl_context.c",
                   "glfw/src/win32_init.c",
+                  "glfw/src/win32_joystick.c",
                   "glfw/src/win32_monitor.c",
                   "glfw/src/win32_time.c",
                   "glfw/src/win32_tls.c",
                   "glfw/src/win32_window.c",
-                  "glfw/src/winmm_joystick.c",
                }
             }
          }
