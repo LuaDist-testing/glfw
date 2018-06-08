@@ -1,15 +1,15 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "glfw"
-version = "0.1.2-0"
+version = "0.1.2-1"
 -- LuaDist source
 source = {
-  tag = "0.1.2-0",
+  tag = "0.1.2-1",
   url = "git://github.com/LuaDist-testing/glfw.git"
 }
 -- Original source
 -- source = {
---    url = "https://github.com/starwing/lua-nanovg/archive/0.1.2.zip",
+--    url = "https://github.com/starwing/lua-nanovg/releases/download/0.1.2/lua-nanovg-0.1.2.zip",
 --    tag = "0.1.2-0",
 --    dir = "lua-nanovg-0.1.2"
 -- }
@@ -22,9 +22,9 @@ dependencies = {
    "lua >= 5.1, < 5.4"
 }
 build = {
-   type = "builtin",
    platforms = {
       windows = {
+         type = "builtin",
          modules = {
             glfw = {
                defines = {
@@ -58,6 +58,14 @@ build = {
                   "glfw/src/win32_window.c"
                }
             }
+         }
+      },
+      macosx = {
+         type = "make",
+         build_target = "macosx",
+         install_pass = false,
+         install = {
+            lib = { "glfw.so" }
          }
       }
    }
